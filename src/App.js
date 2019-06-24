@@ -7,8 +7,16 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <AllahName/>
-                <PrayerTimes/>
+                <table border="2">
+                    <tr>
+                        <td>
+                            <AllahName/>
+                        </td>
+                        <td>
+                            <PrayerTimes/>
+                        </td>
+                    </tr>
+                </table>
             </div>
         )
     }
