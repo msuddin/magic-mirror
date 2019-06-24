@@ -1,4 +1,4 @@
-# sample-react-webapp
+# magic-mirror
 
 ## Purpose
 
@@ -6,19 +6,15 @@ Question:
 What is the purpose of this project?
 
 Answer:
-* When NPM run (npm start), the public/index.html page is loaded
-* The index.html page renders just one component call root
-* In src/index.js, root is defined as the App.js component
-* App.Js is seen as a wrapper components for all components
-* It extends React.Component and renders all other components
-* It also contains logic to call /hi/{id} endpoint
-* It also contains login and logout logic
-* It also controls page render based on user login/logout status
-* The repo also contains a single src/App.test.js
+* To display the five prayer times of the day
+* To randomly display one of Allah's name's
 
 ## Dependencies
-* This project assumes that http://localhost:8080/hi/{id} is available
-* This project assumes that the java jar found at https://github.com/msuddin/sample-spring-hibernate-local-postgres-db is running locally
+### Endpoints
+* This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
+* This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
+### Java Jar
+* This project assumes that the java jar found at https://github.com/msuddin/islam-api is running locally
 
 ## Instructions
 From the root directory of the project, run the following command to firstly install all dependencies:
