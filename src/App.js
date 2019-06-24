@@ -1,6 +1,7 @@
 import React from "react";
 import PrayerTimes from "./components/PrayerTimes";
 import AllahName from "./components/AllahName";
+import "./App.css"
 
 class App extends React.Component {
 

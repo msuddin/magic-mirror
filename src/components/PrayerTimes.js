@@ -37,7 +37,7 @@ class PrayerTimes extends React.Component {
             <div>
                 <table border="2">
                     <tr>
-                        <h1>Prayer Timetable</h1>
+                        <h1>Prayers</h1>
                     </tr>
                     <tr>
                         <table border="2">
