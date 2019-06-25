@@ -10,11 +10,16 @@ Answer:
 * To randomly display one of Allah's name's
 
 ## Dependencies
+
 ### Endpoints
 * This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
 * This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
+
 ### Java Jar
 * This project assumes that the java jar found at https://github.com/msuddin/islam-api is running locally
+
+### External NPM modules
+* This project uses a calendar react app from https://www.npmjs.com/package/react-calendar
 
 ## Instructions
 From the root directory of the project, run the following command to firstly install all dependencies:
