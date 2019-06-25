@@ -10,12 +10,10 @@ class App extends React.Component {
             <div>
                 <table border="2">
                     <tr>
-                        <td>
-                            <AllahName/>
-                        </td>
-                        <td>
-                            <PrayerTimes/>
-                        </td>
+                        <AllahName/>
+                    </tr>
+                    <tr>
+                        <PrayerTimes/>
                     </tr>
                 </table>
             </div>
