@@ -1,6 +1,7 @@
 import React from "react";
 import PrayerTimes from "./components/PrayerTimes";
 import AllahName from "./components/AllahName";
+import CalendarWidget from "./components/Calendar";
 import "./App.css"
 
 class App extends React.Component {
@@ -10,10 +11,16 @@ class App extends React.Component {
             <div>
                 <table border="2">
                     <tr>
-                        <AllahName/>
+                        <td>
+                            <AllahName/>
+
+                        </td>
+                        <td>
+                            <PrayerTimes/>
+                        </td>
                     </tr>
                     <tr>
-                        <PrayerTimes/>
+                        <CalendarWidget/>
                     </tr>
                 </table>
             </div>
