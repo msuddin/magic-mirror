@@ -1,4 +1,5 @@
 import React from "react"
+import { properties } from "../properties";
 
 class TflTrainStatus extends React.Component {
 
@@ -8,7 +9,7 @@ class TflTrainStatus extends React.Component {
     };
 
     componentDidMount() {
-        fetch(`https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status`)
+        fetch(`https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=${properties.APP_ID}&app_key=${properties.APP_KEY}`)
             .then(res => {
                 if (res.ok) {
                     return res.json();
@@ -17,14 +18,10 @@ class TflTrainStatus extends React.Component {
                 }
             })
             .then(json => {
-                console.log("Printing Json");
-                console.log(json);
                 this.setState({
                     models: json,
                     isLoaded: true
                 });
-                console.log("Printing this.state.models");
-                console.log(this.state.models)
             });
     }
 
