@@ -4,25 +4,26 @@ class TflTrainStatus extends React.Component {
 
     state = {
         isLoaded: false,
-        models: []
+        models: null
     };
 
     componentDidMount() {
-        fetch(`https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=ef79ed93&app_key=3808a1306143fa8d0979709dccc1de7d`)
+        fetch(`https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status`)
             .then(res => {
                 if (res.ok) {
-                    console.log("Printing Results");
-                    console.log(res);
                     return res.json();
                 } else {
                     throw Error(res.statusText);
                 }
             })
             .then(json => {
+                console.log("Printing Json");
+                console.log(json);
                 this.setState({
-                    models: json.data,
+                    models: json,
                     isLoaded: true
                 });
+                console.log("Printing this.state.models");
                 console.log(this.state.models)
             });
     }
@@ -38,8 +39,11 @@ class TflTrainStatus extends React.Component {
         return (
             <div>
                 <h1>TFL Train Status</h1>
-                <p>Name</p>
-                <p>{models}</p>
+                {
+                    models.map(models =>
+                        <p key={models.name}>Name: {models.name}, Status: {models.lineStatuses[0].statusSeverityDescription}</p>
+                    )
+                }
             </div>
         )
     }
