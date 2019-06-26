@@ -2,6 +2,7 @@ import React from "react";
 import PrayerTimes from "./components/PrayerTimes";
 import AllahName from "./components/AllahName";
 import CalendarWidget from "./components/Calendar";
+import TflStatus from "./components/TflTrainStatus"
 import "./App.css"
 
 class App extends React.Component {
@@ -10,18 +11,24 @@ class App extends React.Component {
         return (
             <div>
                 <table border="2">
-                    <tr>
-                        <td>
-                            <AllahName/>
-
-                        </td>
-                        <td>
-                            <PrayerTimes/>
-                        </td>
-                    </tr>
-                    <tr>
-                        <CalendarWidget/>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <AllahName/>
+                            </td>
+                            <td>
+                                <PrayerTimes/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <CalendarWidget/>
+                            </td>
+                            <td>
+                                <TflStatus/>
+                            </td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         )

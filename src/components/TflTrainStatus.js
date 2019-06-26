@@ -1,15 +1,15 @@
 import React from "react"
+import { properties } from "../properties";
 
-class PrayerTimes extends React.Component {
+class TflTrainStatus extends React.Component {
 
     state = {
         isLoaded: false,
-        models: {}
+        models: null
     };
 
     componentDidMount() {
-        const date = new Date();
-        fetch(`http://localhost:8081/daily-prayer-time/${("0" + date.getDate()).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`)
+        fetch(`https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=${properties.APP_ID}&app_key=${properties.APP_KEY}`)
             .then(res => {
                 if (res.ok) {
                     return res.json();
@@ -19,7 +19,7 @@ class PrayerTimes extends React.Component {
             })
             .then(json => {
                 this.setState({
-                    models: json.data,
+                    models: json,
                     isLoaded: true
                 });
             });
@@ -35,15 +35,15 @@ class PrayerTimes extends React.Component {
 
         return (
             <div>
-                <h1>Prayers</h1>
-                <p>Fajr: {models.timings.Fajr}</p>
-                <p>Dhuhr: {models.timings.Dhuhr}</p>
-                <p>Asr: {models.timings.Asr}</p>
-                <p>Maghrib: {models.timings.Maghrib}</p>
-                <p>Isha: {models.timings.Isha}</p>
+                <h1>TFL Train Status</h1>
+                {
+                    models.map(models =>
+                        <p key={models.name}>Name: {models.name}, Status: {models.lineStatuses[0].statusSeverityDescription}</p>
+                    )
+                }
             </div>
         )
     }
 }
 
-export default PrayerTimes;
+export default TflTrainStatus;

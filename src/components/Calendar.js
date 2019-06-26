@@ -12,17 +12,11 @@ class CalendarWidget extends React.Component {
     render() {
         return (
             <div>
-                <table border="2">
-                    <tr>
-                        <h1>Calendar</h1>
-                    </tr>
-                    <tr>
-                        <Calendar
-                            onChange={this.onChange}
-                            value={this.state.date}
-                        />
-                    </tr>
-                </table>
+                <h1>Calendar</h1>
+                <Calendar
+                    onChange={this.onChange}
+                    value={this.state.date}
+                />
             </div>
         )
     }

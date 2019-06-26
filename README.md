@@ -14,6 +14,12 @@ Answer:
 ### Endpoints
 * This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
 * This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
+* This project assumes that https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status is available
+** As part of api.tfl.gov, the following two parameters must also be provided
+```
+https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=<app_id>&app_key=<app_key>
+```
+** The value of the app_id and app_key must be populated in the ./properties.js file
 
 ### Java Jar
 * This project assumes that the java jar found at https://github.com/msuddin/islam-api is running locally
