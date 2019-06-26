@@ -1,17 +1,18 @@
 import React from "react"
 
-class PrayerTimes extends React.Component {
+class TflTrainStatus extends React.Component {
 
     state = {
         isLoaded: false,
-        models: {}
+        models: []
     };
 
     componentDidMount() {
-        const date = new Date();
-        fetch(`http://localhost:8081/daily-prayer-time/${("0" + date.getDate()).slice(-2)}/${("0" + (date.getMonth() + 1)).slice(-2)}/${date.getFullYear()}`)
+        fetch(`https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=ef79ed93&app_key=3808a1306143fa8d0979709dccc1de7d`)
             .then(res => {
                 if (res.ok) {
+                    console.log("Printing Results");
+                    console.log(res);
                     return res.json();
                 } else {
                     throw Error(res.statusText);
@@ -22,6 +23,7 @@ class PrayerTimes extends React.Component {
                     models: json.data,
                     isLoaded: true
                 });
+                console.log(this.state.models)
             });
     }
 
@@ -35,15 +37,12 @@ class PrayerTimes extends React.Component {
 
         return (
             <div>
-                <h1>Prayers</h1>
-                <p>Fajr: {models.timings.Fajr}</p>
-                <p>Dhuhr: {models.timings.Dhuhr}</p>
-                <p>Asr: {models.timings.Asr}</p>
-                <p>Maghrib: {models.timings.Maghrib}</p>
-                <p>Isha: {models.timings.Isha}</p>
+                <h1>TFL Train Status</h1>
+                <p>Name</p>
+                <p>{models}</p>
             </div>
         )
     }
 }
 
-export default PrayerTimes;
+export default TflTrainStatus;

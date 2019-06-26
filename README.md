@@ -14,6 +14,7 @@ Answer:
 ### Endpoints
 * This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
 * This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
+* TFL, init blah blah
 
 ### Java Jar
 * This project assumes that the java jar found at https://github.com/msuddin/islam-api is running locally
