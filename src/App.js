@@ -3,6 +3,7 @@ import PrayerTimes from "./components/PrayerTimes";
 import AllahName from "./components/AllahName";
 import CalendarWidget from "./components/Calendar";
 import TflStatus from "./components/TflTrainStatus"
+import Weather from "./components/Weather"
 import "./App.css"
 
 class App extends React.Component {
@@ -18,6 +19,9 @@ class App extends React.Component {
                             </td>
                             <td>
                                 <PrayerTimes/>
+                            </td>
+                            <td>
+                                <Weather/>
                             </td>
                         </tr>
                         <tr>
