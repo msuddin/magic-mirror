@@ -37,7 +37,11 @@ class AllahName extends React.Component {
                 <h1>Allah Name</h1>
                 {
                     models.map(model =>
-                        <p key={model}>Name: {model.name}, Transliteration: {model.transliteration}, Meaning: {model.en.meaning}</p>
+                        <div key={model}>
+                            <p>Name: {model.name}</p>
+                            <p>Transliteration: {model.transliteration}</p>
+                            <p>Meaning: {model.en.meaning}</p>
+                        </div>
                     )
                 }
             </div>

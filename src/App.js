@@ -14,18 +14,26 @@ class App extends React.Component {
                 <table border="2">
                     <tbody>
                         <tr>
-                            <td>
+                            <td width="25%">
                                 <AllahName/>
                             </td>
+                            <td width="50"/>
+                            <td width="25%">
+                                <Weather/>
+                            </td>
+                        </tr>
+                        <tr>
                             <td>
                                 <PrayerTimes/>
                             </td>
-                            <td>
-                                <Weather/>
-                            </td>
+                            <td/>
+                            <td/>
+                        </tr>
+                        <tr>
                             <td>
                                 <CalendarWidget/>
                             </td>
+                            <td/>
                             <td>
                                 <TflStatus/>
                             </td>
