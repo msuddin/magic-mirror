@@ -12,14 +12,24 @@ Answer:
 ## Dependencies
 
 ### Endpoints
+#### Islamic
 * This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
 * This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
+
+#### TFL
 * This project assumes that https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status is available
-** As part of api.tfl.gov, the following two parameters must also be provided
+* As part of api.tfl.gov, the following two parameters must also be provided
 ```
-https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=<app_id>&app_key=<app_key>
+https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status?app_id=<tfl_app_id>&app_key=<tfl_app_key>
 ```
-** The value of the app_id and app_key must be populated in the ./properties.js file
+* The value of the TFL_APP_ID and TFL_APP_KEY must be populated in the ./properties.js file
+
+#### 
+* This project uses the open weather api to get the weather of the current day
+```
+http://api.openweathermap.org/data/2.5/weather?appid=${properties.WEATHER_APP_KEY}&q=london&units=metric
+```
+The value of the WEATHER_APP_KEY must be populated in the ./properties.js file
 
 ### Java Jar
 * This project assumes that the java jar found at https://github.com/msuddin/islam-api is running locally
