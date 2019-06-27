@@ -23,8 +23,6 @@ class App extends React.Component {
                             <td>
                                 <Weather/>
                             </td>
-                        </tr>
-                        <tr>
                             <td>
                                 <CalendarWidget/>
                             </td>

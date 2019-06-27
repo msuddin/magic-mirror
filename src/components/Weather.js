@@ -1,7 +1,7 @@
 import React from "react"
 import { properties } from "../properties";
 
-class PrayerTimes extends React.Component {
+class Weather extends React.Component {
 
     state = {
         isLoaded: false,
@@ -22,31 +22,27 @@ class PrayerTimes extends React.Component {
                     models: json,
                     isLoaded: true
                 });
-                console.log("Printing models{}");
-                console.log(this.state.models)
             });
     }
 
     render() {
         const {
             isLoaded,
-            models,
         } = this.state;
 
         if (!isLoaded) return <div>Loading...</div>;
 
         return (
-
             <div>
                 <h1>Weather</h1>
-                <p>City: {models.name}</p>
-                <p>Temperature: {models.main.temp}</p>
-                <p>Description: {models.weather[0].description}</p>
-                <p>{models.weather[0].icon}</p>
-                <img src='http://openweathermap.org/img/wn/03d@2x.png' alt="Weather Icon"/>
+                <p>City: {this.state.models.name}</p>
+                <p>Temperature: {this.state.models.main.temp}</p>
+                <p>Description: {this.state.models.weather[0].description}</p>
+                <p>{this.state.models.weather[0].icon}</p>
+                <img src={"http://openweathermap.org/img/wn/" + this.state.models.weather[0].icon + "@2x.png"} alt="Weather Icon"/>
             </div>
         )
     }
 }
 
-export default PrayerTimes;
+export default Weather;
