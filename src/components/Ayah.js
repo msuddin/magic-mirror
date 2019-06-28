@@ -8,7 +8,7 @@ class Ayah extends React.Component {
     };
 
     componentDidMount() {
-        fetch(`http://localhost:8081/ayah/10/20`)
+        fetch(`http://localhost:8081/ayah/${Math.floor(Math.random() * 6237)}`)
             .then(res => {
                 if (res.ok) {
                     return res.json();

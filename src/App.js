@@ -25,7 +25,7 @@ class App extends React.Component {
                         </tr>
                         <tr>
                             <td>
-                                <PrayerTimes/>
+                                <Ayah/>
                             </td>
                             <td/>
                             <td>
@@ -34,7 +34,7 @@ class App extends React.Component {
                         </tr>
                         <tr>
                             <td>
-                                <Ayah/>
+                                <PrayerTimes/>
                             </td>
                             <td/>
                             <td>
