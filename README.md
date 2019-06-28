@@ -8,13 +8,19 @@ What is the purpose of this project?
 Answer:
 * To display the five prayer times of the day
 * To randomly display one of Allah's name's
+* To randomly display an Ayah from the Quran
+* To display the weather in London
+* To display TFL train status
+* To display calendar and date
 
 ## Dependencies
 
 ### Endpoints
+
 #### Islamic
 * This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
 * This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
+* This project assumes that http://localhost:8081/ayah/{surah}/{ayah} is available
 
 #### TFL
 * This project assumes that https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status is available
