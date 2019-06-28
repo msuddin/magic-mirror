@@ -20,7 +20,7 @@ Answer:
 #### Islamic
 * This project assumes that http://localhost:8081/allah-name/{nameByNumber} is available
 * This project assumes that http://localhost:8081/daily-prayer-time/{day}/{month}/{year} is available
-* This project assumes that http://localhost:8081/ayah/{surah}/{ayah} is available
+* This project assumes that http://localhost:8081/ayah/{ayah} is available
 
 #### TFL
 * This project assumes that https://api.tfl.gov.uk/line/mode/tube,overground,dlr,tflrail/status is available
