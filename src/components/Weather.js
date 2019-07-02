@@ -35,10 +35,20 @@ class Weather extends React.Component {
         return (
             <div>
                 <h1>Weather</h1>
-                <img src={"http://openweathermap.org/img/wn/" + this.state.models.weather[0].icon + "@2x.png"} alt="Weather Icon"/>
-                <p>City: {this.state.models.name}</p>
-                <p>Temperature: {this.state.models.main.temp}</p>
-                <p>Description: {this.state.models.weather[0].description}</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <img src={"http://openweathermap.org/img/wn/" + this.state.models.weather[0].icon + "@2x.png"} alt="Weather Icon"/>
+                            </td>
+                            <td>
+                                <p>City: {this.state.models.name}</p>
+                                <p>Temperature: {this.state.models.main.temp}</p>
+                                <p>Description: {this.state.models.weather[0].description}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }

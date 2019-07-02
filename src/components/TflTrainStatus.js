@@ -36,11 +36,23 @@ class TflTrainStatus extends React.Component {
         return (
             <div>
                 <h1>TFL Train Status</h1>
-                {
-                    models.map(models =>
-                        <p key={models.name}>Name: {models.name}, Status: {models.lineStatuses[0].statusSeverityDescription}</p>
-                    )
-                }
+                <table>
+                    <tbody>
+                        {
+                            models.map(models =>
+                                <tr key={models.name}>
+                                    <td >
+                                        <p>{models.name}</p>
+                                    </td>
+                                    <td width="25px"/>
+                                    <td>
+                                        <p>{models.lineStatuses[0].statusSeverityDescription}</p>
+                                    </td>
+                                </tr>
+                            )
+                        }
+                    </tbody>
+                </table>
             </div>
         )
     }

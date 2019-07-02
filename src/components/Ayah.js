@@ -35,9 +35,20 @@ class Ayah extends React.Component {
         return (
             <div>
                 <h1>Ayah</h1>
-                <p>{models.text}</p>
-                <p>{models.surah.number}({models.surah.englishName}):{models.numberInSurah}</p>
-                <p></p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>{models.text}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>{models.surah.number}({models.surah.englishName}):{models.numberInSurah}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }

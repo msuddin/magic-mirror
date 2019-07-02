@@ -12,7 +12,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <table border="2">
+                <table>
                     <tbody>
                         <tr>
                             <td width="25%">

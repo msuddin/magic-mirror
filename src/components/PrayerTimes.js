@@ -36,11 +36,55 @@ class PrayerTimes extends React.Component {
         return (
             <div>
                 <h1>Prayers</h1>
-                <p>Fajr: {models.timings.Fajr}</p>
-                <p>Dhuhr: {models.timings.Dhuhr}</p>
-                <p>Asr: {models.timings.Asr}</p>
-                <p>Maghrib: {models.timings.Maghrib}</p>
-                <p>Isha: {models.timings.Isha}</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>Fajr:</p>
+                            </td>
+                            <td width="25px"/>
+                            <td>
+                                <p>{models.timings.Fajr}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Dhuhr:</p>
+                            </td>
+                            <td/>
+                            <td>
+                                <p>{models.timings.Dhuhr}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Asr:</p>
+                            </td>
+                            <td/>
+                            <td>
+                                <p>{models.timings.Asr}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Maghrib:</p>
+                            </td>
+                            <td/>
+                            <td>
+                                <p>{models.timings.Maghrib}</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Isha:</p>
+                            </td>
+                            <td/>
+                            <td>
+                                <p>{models.timings.Isha}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }

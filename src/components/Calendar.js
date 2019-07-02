@@ -11,7 +11,7 @@ class CalendarWidget extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="calendar-widget">
                 <h1>Calendar</h1>
                 <Calendar
                     onChange={this.onChange}

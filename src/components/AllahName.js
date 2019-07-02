@@ -38,9 +38,37 @@ class AllahName extends React.Component {
                 {
                     models.map(model =>
                         <div key={model}>
-                            <p>Name: {model.name}</p>
-                            <p>Transliteration: {model.transliteration}</p>
-                            <p>Meaning: {model.en.meaning}</p>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>Name:</p>
+                                        </td>
+                                        <td width="25px"/>
+                                        <td>
+                                            <p>{model.name}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Transliteration</p>
+                                        </td>
+                                        <td/>
+                                        <td>
+                                            <p>{model.transliteration}</p>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <p>Meaning:</p>
+                                        </td>
+                                        <td/>
+                                        <td>
+                                            <p>{model.en.meaning}</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
                     )
                 }
